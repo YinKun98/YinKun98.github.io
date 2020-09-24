@@ -7,10 +7,10 @@
 
     
 
-    <title>Tag: test01 | YkunBlog</title>
+    <title>test03 | YkunBlog</title>
     <meta name="author" content="Yin Kun" />
     <meta name="keywords" content="" />
-    <meta name="description" content="" />
+    <meta name="description" content="我是短小精悍的文章摘要" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
 
@@ -90,6 +90,8 @@
 
         
         
+        
+        
 
         
         <div class="author-meta">
@@ -142,72 +144,45 @@
 
         <div id="content" class="content">
             <div id="wrapper" class="wrapper" style="max-width: 800px">
-                
+                <article class="article" itemscope itemprop="blogPost">
+    
+    <header class="article-header">
+        
+        <h1 itemprop="name">
+            test03
+        </h1>
+        
+        <div class="article-meta clearfix">
+            <a class="article-date" href="http://example.com/bolg/2020/09/24/test03/index.html">
+    
+    <i class="icon-calendar vm"></i>
+    
+    <time class="vm" datetime="2020-09-24T01:32:24.000Z" itemprop="datePublished">2020-09-24</time>
+</a>
 
-
-<div class="page-hd">
-    test01
-    <small>(2)</small>
+            
+<div class="article-tag-list">
+    <i class="icon-tag vm"></i>
+    <a class="article-tag-link" href="/tags/test/" rel="tag">test</a>, <a class="article-tag-link" href="/tags/test01/" rel="tag">test01</a>
 </div>
 
 
-
+        </div>
+    </header>
     
-    
-    
-    
-    
-    <section class="archives-wrap">
-    <div class="archive-year-wrap">
-    <a href="/archives/2020" class="page-hd">
-        2020
-    </a>
-    </div>
-    <ol class="archives">
-    
-
-    <li class="archive-section-item">
+    <section class="article-body markdown-body">
         
-<article class="archive-article archive-type-post">
-    <div class="archive-article-inner">
-        <header class="archive-article-header">
-            <a class="archive-article-link" href="/bolg/2020/09/24/test01/">test01</a>
-            <span class="archive-article-date">
-                (<a class="article-date" href="/archives/2020/09">
-    
-    <time class="vm" datetime="2020-09-24T01:32:24.000Z" itemprop="datePublished">9/24</time>
-</a>
-)
-            </span>
-        </header>
-    </div>
-</article>
-    </li>
+        <p><em>我是短小精悍的文章摘要</em></p>
+<a id="more"></a>
 
-    
-    
-
-    <li class="archive-section-item">
         
-<article class="archive-article archive-type-post">
-    <div class="archive-article-inner">
-        <header class="archive-article-header">
-            <a class="archive-article-link" href="/bolg/2020/09/24/test03/">test03</a>
-            <span class="archive-article-date">
-                (<a class="article-date" href="/archives/2020/09">
-    
-    <time class="vm" datetime="2020-09-24T01:32:24.000Z" itemprop="datePublished">9/24</time>
-</a>
-)
-            </span>
-        </header>
-    </div>
+    </section>
 </article>
-    </li>
 
 
-</ol></section>
 
+
+<a id="pageprev" href="/bolg/2020/09/24/test01/" class="article-prev" title="test01"><i class="icon-arrow-left"></i></a>
 
 
 
@@ -285,6 +260,33 @@
         });
     });
     </script>
+    
+        
+<script src="/js/scrollspy.min.js"></script>
+
+        <script type="text/javascript">
+        $(document.body).scrollspy({target: '#aside-inner'});
+
+        $(window).on('resize', function() {
+            var hw = $('#header').width();
+            var ww = $('#wrapper').width();
+            var space = ($(this).width() - hw - ww) / 2 / 2;
+
+            var pageprev = $('#pageprev');
+            var pagenext = $('#pagenext');
+            var avg = (pageprev.width() + pagenext.width()) / 2
+
+            if(space > avg) {
+                var len = space - avg / 2;
+                var styles = {position: 'fixed', top: '50%', marginTop: - (pageprev.width() + pagenext.width()) / 4}
+                pageprev.css($.extend({left: hw + len}, styles));
+                pagenext.css($.extend({right: len}, styles));
+            } else {
+                pageprev.removeAttr('style');
+                pagenext.removeAttr('style');
+            }
+        }).trigger('resize');
+        </script>
     
 
 </body>
